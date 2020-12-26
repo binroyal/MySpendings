@@ -14,43 +14,43 @@ A new Flutter project by Tung.
 
 * Màn hình chính
 
-![alt](/image/mhchinh.jpg)
+![alt](~/image/mhchinh.jpg)
 
 * Màn hình chỉnh sửa
 
-![alt](/image/chinhsua.jpg)
+![alt](~/image/chinhsua.jpg)
 
 * Màn hình chỉnh sửa sử dụng bàn phím số cho phần số tiền:
 
-![alt](/image/mhsuact.jpg)
+![alt](~/image/mhsuact.jpg)
 
 * Màn hình xem chi tiết
 
-![alt](/image/mhxemct.jpg)
+![alt](~/image/mhxemct.jpg)
 
 * Màn hình xóa
 
-![alt](/image/mhxoa.jpg)
+![alt](~/image/mhxoa.jpg)
 
 * Màn hình thêm
 
-![alt](/image/mhthem.jpg)
+![alt](~/image/mhthem.jpg)
 
 ## Mã nguồn hệ thống
 
 * Tạo bàn phím số cho phần số tiền
 
-![alt](/image/ptmhxoa.png)
+![alt](~/image/ptmhxoa.png)
 
 * Alert xác nhận xóa
 
-![alt](/image/ptmhxoa.png)
+![alt](~/image/ptmhxoa.png)
 
 * Source code màn hình chính
 
-![alt](/image/ptmhchinh.png)
+![alt](~/image/ptmhchinh.png)
 
 * Source code màn hình sửa
 
-![alt](/image/ptmhsua.png)
+![alt](~/image/ptmhsua.png)
 
