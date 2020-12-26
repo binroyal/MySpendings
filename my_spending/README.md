@@ -14,43 +14,45 @@ A new Flutter project by Tung.
 
 * Màn hình chính
 
-![alt](my_spending/image/mhchinh.jpg)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
+![alt](https://github.com/binroyal/MySpendings/blob/master/my_spending\image\mhchinh.jpg)
 
 * Màn hình chỉnh sửa
 
-![alt](my_spending/image/chinhsua.jpg)
+![alt](my_spending\image\chinhsua.jpg)
 
 * Màn hình chỉnh sửa sử dụng bàn phím số cho phần số tiền:
 
-![alt](my_spending/image/mhsuact.jpg)
+![alt](my_spending\image\mhsuact.jpg)
 
 * Màn hình xem chi tiết
 
-![alt](my_spending/image/mhxemct.jpg)
+![alt](my_spending\image\mhxemct.jpg)
 
 * Màn hình xóa
 
-![alt](my_spending/image/mhxoa.jpg)
+![alt](my_spending\image\mhxoa.jpg)
 
 * Màn hình thêm
 
-![alt](my_spending/image/mhthem.jpg)
+![alt](my_spending\image\mhthem.jpg)
 
 ## Mã nguồn hệ thống
 
 * Tạo bàn phím số cho phần số tiền
 
-![alt](my_spending/image/ptmhxoa.png)
+![alt](my_spending\image\ptmhxoa.png)
 
 * Alert xác nhận xóa
 
-![alt](my_spending/image/ptmhxoa.png)
+![alt](my_spending\image\ptmhxoa.png)
 
 * Source code màn hình chính
 
-![alt](my_spending/image/ptmhchinh.png)
+![alt](my_spending\image\ptmhchinh.png)
 
 * Source code màn hình sửa
 
-![alt](my_spending/image/ptmhsua.png)
+![alt](my_spending\image\ptmhsua.png)
 
