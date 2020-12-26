@@ -3,6 +3,7 @@
 A new Flutter project by Tung.
 
 **Họ và tên: Hoàng Thanh Tùng**
+
 **MSV: 1621050736**
 
 ## Giới thiệu project
@@ -11,16 +12,45 @@ A new Flutter project by Tung.
 
 ## Các màn hình trong Project
 
-*Màn hình chính
-![alt](https://drive.google.com/file/d/1-u1RpCQH8WRpQmjiYsPkqm8XBfUBXEYe/view?usp=sharing,%20https://drive.google.com/file/d/13o-iyjW4tKFvdMXWE4QA2WoAJ3SIPNbN/view?usp=sharing,%20https://drive.google.com/file/d/1HjII_ccTWUvOAdDajZ6tTE65tpwkPKV0/view?usp=sharing,%20https://drive.google.com/file/d/1Q0vxsT5LHsqhdDiwU30so9Dqa32k7Ou6/view?usp=sharing,%20https://drive.google.com/file/d/1fri52zQDlEwtvr3tfpfn6xAS50t5NRPD/view?usp=sharing)
+* Màn hình chính
 
-This project is a starting point for a Flutter application.
+![alt](\image\mhchinh.jpg)
 
-A few resources to get you started if this is your first Flutter project:
+* Màn hình chỉnh sửa
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![alt](\image\chinhsua.jpg)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Màn hình chỉnh sửa sử dụng bàn phím số cho phần số tiền:
+
+![alt](\image\mhsuact.jpg)
+
+* Màn hình xem chi tiết
+
+![alt](\image\mhxemct.jpg)
+
+* Màn hình xóa
+
+![alt](\image\mhxoa.jpg)
+
+* Màn hình thêm
+
+![alt](\image\mhthem.jpg)
+
+## Mã nguồn hệ thống
+
+* Tạo bàn phím số cho phần số tiền
+
+![alt](\image\ptmhxoa.png)
+
+* Alert xác nhận xóa
+
+![alt](\image\ptmhxoa.png)
+
+* Source code màn hình chính
+
+![alt](\image\ptmhchinh.png)
+
+* Source code màn hình sửa
+
+![alt](\image\ptmhsua.png)
+
