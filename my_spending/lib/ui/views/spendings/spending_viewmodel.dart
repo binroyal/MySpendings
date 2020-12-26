@@ -91,6 +91,14 @@ class SpendingViewModel extends BaseViewModel {
     state = SpendingViewState.updateView;
   }
 
+  String getTotal() {
+    int t = 0;
+    for (Spending a in items) {
+      t += a.desc;
+    }
+    return t.toString();
+  }
+
   bool checkDesc() {
     var title = editingControllerTitle.text;
     var x = int.parse(editingControllerDesc.text);

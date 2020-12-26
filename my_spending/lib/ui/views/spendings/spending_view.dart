@@ -14,9 +14,12 @@ class SpendingView extends StatelessWidget {
     return ViewModelBuilder<SpendingViewModel>.reactive(
       onModelReady: (model) => model.init(),
       builder: (context, model, child) => Scaffold(
-        backgroundColor: HexColor('#B73225'),
+        backgroundColor: Colors.white,
         appBar: (model.state == SpendingViewState.listView)
-            ? AppBar(title: Text(model.title))
+            ? AppBar(
+                backgroundColor: HexColor("#932432"),
+                title: Text(model.title),
+              )
             : null,
         body: Stack(
           children: [
@@ -26,17 +29,29 @@ class SpendingView extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       Spending item = model.items[index];
                       return Ink(
-                        color: Colors.lightGreen,
+                        color: HexColor('#4D774E'),
                         child: ListTile(
                             trailing: new IconButton(
                                 icon: new Icon(Icons.delete),
-                                color: Colors.red,
+                                color: Colors.red[400],
                                 onPressed: () => {
                                       model.editingItem = item,
                                       showAlertDialog(context, model)
                                     }),
-                            title: Text(item.title),
-                            subtitle: Text("${item.desc}"),
+                            title: Text(
+                              item.title,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            subtitle: Text(
+                              "${item.desc}",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontStyle: FontStyle.italic),
+                            ),
                             onTap: () {
                               model.editingItem = item;
                               model.state = SpendingViewState.itemView;
@@ -51,6 +66,50 @@ class SpendingView extends StatelessWidget {
                         : model.state == SpendingViewState.insertView
                             ? SpendingViewItemAdd()
                             : SizedBox(),
+            Stack(
+              children: <Widget>[
+                model.state == SpendingViewState.listView
+                    ? Positioned(
+                        bottom: 0.0,
+                        right: 0.0,
+                        left: 0.0,
+                        height: 55,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 0.0),
+                          child: Container(
+                              color: HexColor("#12232E"),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 10.0),
+                                    child: Text(
+                                      "TỔNG CHI PHÍ: ",
+                                      style: TextStyle(
+                                          color: HexColor('#e1b382'),
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 0.0),
+                                    child: Text(
+                                      "${model.getTotal()}",
+                                      style: TextStyle(
+                                          color: HexColor('#e1b382'),
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
+                              )),
+                        ),
+                      )
+                    : SizedBox(),
+              ],
+            )
           ],
         ),
         floatingActionButton: model.state == SpendingViewState.listView
@@ -59,7 +118,7 @@ class SpendingView extends StatelessWidget {
                 onPressed: () => {
                       model.editingControllerDesc.text = "",
                       model.editingControllerTitle.text = "",
-                      model.editingItem = null,
+                      model.editingItem = Spending("", 0),
                       model.state = SpendingViewState.insertView
                     })
             : null,
@@ -85,7 +144,7 @@ showAlertDialog(BuildContext context, SpendingViewModel model) {
 
   // set up the AlertDialog
   AlertDialog alert = AlertDialog(
-    backgroundColor: Colors.grey,
+    backgroundColor: HexColor("#e1b382"),
     title: Text("Xác nhận"),
     content: Text("Bạn có chắc chắn muốn xóa bản ghi này?"),
     actions: [

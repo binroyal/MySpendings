@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:myspending/ui/views/spendings/spending_viewmodel.dart';
 import 'package:stacked/stacked.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class SpendingViewItemEdit extends ViewModelWidget<SpendingViewModel> {
   final _formKey = GlobalKey<FormState>();
-
   @override
-  Widget build(BuildContext context, model) {
+  Widget build(BuildContext context, SpendingViewModel model) {
     return Scaffold(
+      backgroundColor: HexColor('#e1b382'),
       appBar: AppBar(
+        backgroundColor: HexColor("#932432"),
         title: Text((model.editingItem.id != "")
             ? 'Cập nhật khoản chi'
             : 'Thêm mới khoản chi'),
@@ -43,7 +45,7 @@ class SpendingViewItemEdit extends ViewModelWidget<SpendingViewModel> {
                       labelText: "Tên khoản chi",
                     ),
                     validator: (String value) {
-                      return value == ''
+                      return (value.isEmpty)
                           ? 'Tên khoản chi không được để trống'
                           : null;
                     },
