@@ -6,7 +6,7 @@ class Spending {
       UniqueKey().hashCode.toUnsigned(20).toRadixString(16).padLeft(5, '0');
 
   final String title;
-  final String desc;
+  final int desc;
   bool isDeleted = false;
 
   Spending(this.title, this.desc);
@@ -20,7 +20,7 @@ class Spending {
   static String get createTable =>
       'CREATE TABLE $tableName(`id` TEXT PRIMARY KEY,'
       ' `title` TEXT,'
-      ' `desc` TEXT,'
+      ' `desc` INTEGER,'
       ' `isDeleted` INTEGER DEFAULT 0)';
 
   /// Phương thức này được thiết lập để tạo nên danh sách các ghi chú

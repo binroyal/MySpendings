@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:myspending/ui/views/spendings/spending_model.dart';
 import 'package:myspending/ui/views/spendings/spending_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -21,7 +20,7 @@ class SpendingViewItem extends ViewModelWidget<SpendingViewModel> {
       body: Center(
         child: ListTile(
           title: Text(model.editingItem.title),
-          subtitle: Text(model.editingItem.desc),
+          subtitle: Text(model.editingItem.desc.toString()),
         ),
       ),
     );

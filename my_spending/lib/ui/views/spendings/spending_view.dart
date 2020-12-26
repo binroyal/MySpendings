@@ -3,6 +3,7 @@ import 'package:myspending/ui/views/spendings/widget2/spending_view_item_add.dar
 import 'package:myspending/ui/views/spendings/widgets/spending_view_item.dart';
 import 'package:myspending/ui/views/spendings/widgets/spending_view_item_edit.dart';
 import 'package:stacked/stacked.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 import 'spending_viewmodel.dart';
 import 'spending_model.dart';
@@ -13,7 +14,10 @@ class SpendingView extends StatelessWidget {
     return ViewModelBuilder<SpendingViewModel>.reactive(
       onModelReady: (model) => model.init(),
       builder: (context, model, child) => Scaffold(
-        appBar: AppBar(title: Text(model.title)),
+        backgroundColor: HexColor('#B73225'),
+        appBar: (model.state == SpendingViewState.listView)
+            ? AppBar(title: Text(model.title))
+            : null,
         body: Stack(
           children: [
             model.state == SpendingViewState.listView
@@ -32,7 +36,7 @@ class SpendingView extends StatelessWidget {
                                       showAlertDialog(context, model)
                                     }),
                             title: Text(item.title),
-                            subtitle: Text(item.desc),
+                            subtitle: Text("${item.desc}"),
                             onTap: () {
                               model.editingItem = item;
                               model.state = SpendingViewState.itemView;
@@ -53,7 +57,9 @@ class SpendingView extends StatelessWidget {
             ? FloatingActionButton(
                 child: Icon(Icons.add),
                 onPressed: () => {
-                      model.editingItem.id = "",
+                      model.editingControllerDesc.text = "",
+                      model.editingControllerTitle.text = "",
+                      model.editingItem = null,
                       model.state = SpendingViewState.insertView
                     })
             : null,
