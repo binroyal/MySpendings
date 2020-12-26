@@ -11,7 +11,7 @@ import 'spending_model.dart';
 enum SpendingViewState { listView, itemView, insertView, updateView }
 
 class SpendingViewModel extends BaseViewModel {
-  final title = 'Quản lý tiêu dùng';
+  final title = 'QUẢN LÝ TIÊU DÙNG';
 
   /// Danh sách các bản ghi được load bất đồng bộ bên trong view model,
   /// khi load thành công thì thông báo đến view để cập nhật trạng thái
